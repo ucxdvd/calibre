@@ -1,0 +1,59 @@
+#!/usr/bin/env python2
+# vim:fileencoding=utf-8
+from __future__ import unicode_literals, division, absolute_import, print_function
+from calibre.web.feeds.news import BasicNewsRecipe
+
+class AdvancedUserRecipe1430853553(BasicNewsRecipe):
+    title          = 'RSS feeds'
+    description    = u'My favorite feeds - a work in progress'
+    oldest_article = 7 #in days
+    max_articles_per_feed = 5
+    auto_cleanup   = True
+    #no_stylesheets = True
+    #oldest_article = 1.5
+    #simultaneous_downloads=20
+    #timeout=30
+    timefmt = ' [%a, %d %b %Y %H:%M]'
+    tags = 'news, calibre, rss, articles'
+    #use_embedded_content = False
+
+    feeds          = [
+	('Mijn Kapitaal RSS', 'http://www.mijnkapitaal.be/feed/'),
+	('No More Waffles RSS', 'http://www.nomorewaffles.com/feed/'),
+	('Mr Money Mustache', 'http://feeds.feedburner.com/mrmoneymustache'),
+	('Dividend Mantra', 'http://feeds.feedburner.com/DividendMantra/'),
+        ('Spaargids', 'http://feeds.spaargids.be/nieuws/allecategorie'),
+	('Kapitale vragen - Sparen & Beleggen', 'http://www.kapitalevragen.be/thema/prive/sparen-beleggen/feed/'),
+	('Kapitale vragen - Inkomen', 'http://www.kapitalevragen.be/thema/prive/inkomen/feed/'),
+	('Kapitale vragen - Wonen', 'http://www.kapitalevragen.be/thema/prive/wonen/feed/'),
+	('Kapitale vragen - Verzekeren', 'http://www.kapitalevragen.be/thema/prive/verzekeren/feed/'),
+	('Kapitale vragen - Pensioen', 'http://www.kapitalevragen.be/thema/prive/pensioen/feed/'),
+	#('Kapitale vragen - Successie', 'http://www.kapitalevragen.be/thema/prive/successie/feed/'),
+        ('Morningstar','http://www.morningstar.be/be/feeds/rss.aspx?lang=nl-BE'),
+        ('Bespaar Belastingen','http://www.bespaarbelastingen.be/feed'),
+        #('Metro Must Read', 'http://nl.metrotime.be/over/must-read/feed/'),
+        #('Metro newsfeed', 'http://nl.metrotime.be/over/news/feed/'),
+        #('Lifehacker', 'http://feeds.gawker.com/lifehacker/full'),
+        #('The Week', 'http://fulltextrssfeed.com/theweek.com/home.rss'),
+        #('The Onion', 'http://feeds.theonion.com/theonion/daily'),
+        #('Wikipedia Featured', 'http://jeays.net/wikipedia/featured.xml'),
+        #('10 things', 'http://theweek.com/author/harold-maass.rss'),
+        #('BBC', 'http://feeds.bbci.co.uk/news/rss.xml'),
+        #('BBC World', 'http://feeds.bbci.co.uk/news/world/rss.xml'),
+	#('BBC Technology','http://feeds.bbci.co.uk/news/technology/rss.xml'),
+        ('Recode', 'http://recode.net/must-reads/feed/'),
+	('vastgoedcertificaten','http://vastgoedcertificaten.blogspot.com/feeds/posts/default'),
+#	('testaankoop invest','https://www.test-aankoop.be/invest/rss/'),
+	#('XKCD','https://xkcd.com/rss.xml'),
+	#('Daily Offers','http://www.dailyoffers.nl/rss.xml'),
+	#('IO9','http://feeds.gawker.com/io9/full'),
+	('Netto Tijd','http://netto.tijd.be/rss'),
+	('Wired','http://feeds.wired.com/wired/index'),
+	('Quite Interesting','http://www.telegraph.co.uk/men/the-filter/qi/rss'),
+	#('Google News BE','http://news.google.be/news?pz=1&cf=all&ned=nl_be&hl=nl&output=rss'),
+	('Ansible Blog','http://www.ansible.com/blog/rss.xml'),
+	('The Mag Pi','https://www.raspberrypi.org/magpi/feed/?post_type[0]=issues&post_type[1]=post'),
+	('Cultured Food Life','http://www.culturedfoodlife.com/feed/'),
+	('Wild Fermentation','http://www.wildfermentation.com/feed/'),
+	('Nourished Kitchen','http://feeds.feedburner.com/nourishedkitchen'),
+    ]

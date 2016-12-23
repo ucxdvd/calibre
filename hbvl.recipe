@@ -1,0 +1,20 @@
+#!/usr/bin/env python2
+# vim:fileencoding=utf-8
+from __future__ import unicode_literals, division, absolute_import, print_function
+from calibre.web.feeds.news import AutomaticNewsRecipe
+
+class BasicUserRecipe1449503905(AutomaticNewsRecipe):
+    title          = 'Het Belang Van Limburg'
+    oldest_article = 7
+    max_articles_per_feed = 100
+    auto_cleanup   = True
+
+    feeds          = [
+        ('Home', 'http://www.hbvl.be/rss/section/D1618839-F921-43CC-AF6A-A2B200A962DC'),
+        ('Limburg', 'http://www.hbvl.be/rss/section/0DB351D4-B23C-47E4-AEEB-09CF7DD521F9'),
+        ('Economie', 'http://www.hbvl.be/rss/section/A160C0A6-EFC9-45D8-BF88-86B6F09C92A6'),
+        ('Binnenland', 'http://www.hbvl.be/rss/section/FBAF3E6E-21C4-47D3-8A71-902A5E0A7ECB'),
+        ('Buitenland', 'http://www.hbvl.be/rss/section/18B4F7EE-C4FD-4520-BC73-52CACBB3931B'),
+        ('Media & Cultuur', 'http://www.hbvl.be/rss/section/3D61D4A0-88CE-44E9-BCE0-A2AD00AD7D2E'),
+        ('Sport', 'http://www.hbvl.be/rss/section/0AECEA6E-9E2F-4509-A874-A2AD00ADEAA4'),
+    ]

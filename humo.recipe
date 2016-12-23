@@ -1,0 +1,21 @@
+#!/usr/bin/env python2
+# vim:fileencoding=utf-8
+from __future__ import unicode_literals, division, absolute_import, print_function
+from calibre.web.feeds.news import AutomaticNewsRecipe
+
+class BasicUserRecipe1449503712(AutomaticNewsRecipe):
+    title          = 'Humo'
+    oldest_article = 7
+    max_articles_per_feed = 100
+    auto_cleanup   = True
+
+    feeds          = [
+        ('Deze Week In Humo', 'http://feeds.feedburner.com/DezeWeekInHumo'),
+        ('Film Recensies', 'http://feeds.feedburner.com/HumoFilmRecensies'),
+        ('CD Recensies', 'http://feeds.feedburner.com/HumoCdRecensies'),
+        ('Dvd Recensies', 'http://feeds.feedburner.com/HumoDvdRecensies'),
+        ('Boek Recensies', 'http://feeds.feedburner.com/HumoBoekRecensies'),
+        ('Festivalitis', 'http://feeds.feedburner.com/HumoFestivalitisRssFeed'),
+        ('Linke Boel', 'http://feeds.feedburner.com/HumosLinkeBoel'),
+        ('Wedstrijden', 'http://feeds.feedburner.com/HumoWedstrijden'),
+    ]
